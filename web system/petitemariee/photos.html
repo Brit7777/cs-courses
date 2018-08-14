@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Photo Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="ninja-slider.css" rel="stylesheet" type="text/css" />  
+    <script src="ninja-slider.js" type="text/javascript"></script>
+    <link rel=stylesheet href="photos.css"/>
+    <link rel=stylesheet href="dropdown.css"/>
+    <script>
+        function lightbox(idx) {
+            //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+            var ninjaSldr = document.getElementById("ninja-slider");
+            ninjaSldr.parentNode.style.display = "block";
+
+            nslider.init(idx);
+
+            var fsBtn = document.getElementById("fsBtn");
+            fsBtn.click();
+        }
+
+        function fsIconClick(isFullscreen) { //fsIconClick is the default event handler of the fullscreen button
+            var ninjaSldr = document.getElementById("ninja-slider");
+            ninjaSldr.parentNode.style.display = isFullscreen ? "block" : "none";
+        }
+    </script>
+    <style>
+        body {font: normal 0.9em ;margin:0;background:white;}
+        a {color:#1155CC;}
+        ul li {padding: 0px 0;}
+
+        .gallery img{
+            width:179px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!--Main Header-->
+  <header id="main_header">
+  <nav id="main_menu"></nav>
+  <ul id='menu'>
+    <li><a href='index.html'>HOME</a></li>
+    <li><a href='about.html'>ABOUT</a></li>
+    <ul><li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">CUSTOMIZE+</a>
+        <div class="dropdown-content" id="myDropdown">
+         <a href="place.html">PLACE</a>
+         <a href="etc.html">ETC.</a>
+        </div>
+      </li></ul>
+    <li><a href='photos.html'>PHOTOS</a></li>
+    <li><a href='listboard.jsp'>Q&A</a></li>
+    <li><a href="login.jsp"><img alt="Login Icon" src="login_icon.png" width="45" height="45"></a></li>
+    </ul>
+
+
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var d = 0; d < dropdowns.length; d++) {
+            var openDropdown = dropdowns[d];
+            if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+            }
+        }
+      }
+  }
+  </script>
+
+
+<!--Content-->
+<div id="content">
+
+  <!--start-->
+    <div style="display:none;">
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+                    <li>
+                        <!--popup-->
+                        <a class="ns-img" href="couple1.jpg"></a>
+                        <div class="caption">
+                            <h3>Lee Na-Young & Wonbin Couple</h3>
+                            <p>June 17th, 2014</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="couple2.jpg"></a>
+                        <div class="caption">
+                            <h3>Lee Hyori & Lee Sang-Soon Couple</h3>
+                            <p>May 4th, 2012</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="ns-img" style="background-image:url(couple3.jpg);"></span>
+                        <div class="caption">
+                            <h3>Kim Na-Young & Hwag Jung-Min Couple</h3>
+                            <p>July 8th, 2015</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/"><img class="ns-img" src="couple4.jpg" /></a>
+                        <div class="caption">
+                            <h3>Yoon Seung-Ah & Kim Moo-Yul</h3>
+                            <p>April 4th, 2015</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="couple5.jpg"></a>
+                        <div class="caption">
+                            <h3>Bong Tae-Gyu & Hasisi Park</h3>
+                            <p>March 3rd, 2015</p>
+                        </div>
+                    </li>
+                </ul>
+                <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+            </div>
+        </div>
+    </div>
+    <div style="max-width:700px;margin:50px auto;">
+        <h2>PHOTOS</h2>
+        <br /><br />
+        <div class="gallery">
+            <!--start page-->
+            <img src="couple1.jpg" onclick="lightbox(0)" style="width:auto; height:140px;" />
+            <img src="couple2.jpg" onclick="lightbox(1)" style="width:auto; height:140px;" /><br />
+            <img src="couple3.jpg" onclick="lightbox(2)" style="width:auto; height:140px;"/>
+            <img src="couple4.jpg" onclick="lightbox(3)" style="width:auto; height:140px;"/>
+            <img src="couple5.jpg" onclick="lightbox(4)" style="width:auto; height:140px;"/>
+        </div>
+    </div>
+
+
+</div>
+
+<!--Footer-->
+<footer id="main_footer">
+  <p>1600 Amphitheatre Parkway Mountain View, CA 64023 T. +1 650 238 2999<p>
+    <p>© 2016 Petite Mariee, Inc. All Rights Reserved.<p>
+</footer>
+</header>
+</body>
+</html>

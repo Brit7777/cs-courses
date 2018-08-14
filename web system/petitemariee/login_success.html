@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Petite Mariee Home</title>
+	<link rel=stylesheet href="homepage.css"/>
+	<link rel=stylesheet href="dropdown.css"/>
+    <style>
+    
+	</style>
+
+</head>
+
+
+<body>
+<!--Main Header-->
+<header id="main_header">
+	<nav id="main_menu"></nav>
+	<ul id='menu'>
+		<li><a href='index.html'>HOME</a></li>
+		<li><a href='about.html'>ABOUT</a></li>
+		<ul><li class="dropdown">
+    		<a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">CUSTOMIZE+</a>
+    		<div class="dropdown-content" id="myDropdown">
+     	 	 <a href="place.html">PLACE</a>
+     		 <a href="dress.html">DRESS</a>
+     	 	 <a href="etc.html">ETC.</a>
+      		 <a href="totalbudget.html">TOTAL BUDGET</a>
+    		</div>
+  		</li></ul>
+		<li><a href='photos.html'>PHOTOS</a></li>
+		<li><a href='listboard.jsp'>Q&A</a></li>
+		<li><a href="logout.jsp"><img alt="Login Icon" src="login_icon.png" width="45" height="45"></a></li>
+  	</ul>
+
+	<script src="pm_1.jsp"></script>
+	<script>
+	/* When the user clicks on the button,
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+    	document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(e) {
+  		if (!e.target.matches('.dropbtn')) {
+    		var dropdowns = document.getElementsByClassName("dropdown-content");
+    		for (var d = 0; d < dropdowns.length; d++) {
+      			var openDropdown = dropdowns[d];
+      			if (openDropdown.classList.contains('show')) {
+        		openDropdown.classList.remove('show');
+      			}
+    		}
+  		}
+	}
+	</script>
+</header>
+
+<!--Content-->
+<div id="content">
+	<img src="homepage_img.png" alt="Homepage Image" height="510" width="1200">
+</div>
+
+<!--Footer-->
+<footer id="main_footer">
+	<p>1600 Amphitheatre Parkway Mountain View, CA 64023 T. +1 650 238 2999<p>
+    <p>© 2016 Petite Mariee, Inc. All Rights Reserved.<p>
+</footer>
+
+</body>
+</html>

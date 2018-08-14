@@ -1,0 +1,39 @@
+/*珥덇린�솕*/
+*{margin:0; padding:0}
+body{font-family: 'Times New Roman', serif;}
+li{list-style:none;}
+a{text-decoration:none;}
+img{border:0;}
+
+
+/*main_header*/
+#main_header{
+    width:1200px; margin:0 auto;
+    height:100px; position:relative;
+} 
+ul#menu {padding: 40px;}
+ul#menu li {display: inline; margin-left: 70px; float: left;}
+ul#menu li a {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #696969;
+}
+ul#menu li a:hover {color:black; text-decoration: underline}
+
+ul#menu li:nth-child(6) a {background-color: white;}
+
+/*Content*/
+#content{
+    width:1200px; height:520px; margin:0px auto;
+    overflow:hidden; background-color:white;}
+#content_box{
+    margin:auto; 
+    width:1198px; height:1000px; border: 1px solid #DCDCDC; padding-top:20px}
+
+
+/*footer*/
+#main_footer{
+    width:1200px; height: 65px; margin:0px auto; margin-bottom:10px;
+    background-color:#FFC1C1; color:white;}
+#main_footer> p {padding: 1px 15px; padding-top:3px;}

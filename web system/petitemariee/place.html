@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>place</title>
+	<link rel=stylesheet href="place.css"/>
+	<link rel=stylesheet href="dropdown.css"/>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	
+    <style>
+    
+	</style>
+
+</head>
+
+
+<body>
+<!--Main Header-->
+<header id="main_header">
+	<nav id="main_menu"></nav>
+	<ul id='menu'>
+		<li><a href='index.html'>HOME</a></li>
+		<li><a href='about.html'>ABOUT</a></li>
+		<ul><li class="dropdown">
+    		<a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">CUSTOMIZE+</a>
+    		<div class="dropdown-content" id="myDropdown">
+     	 	 <a href="place.html">PLACE</a>
+     	 	 <a href="etc.jsp">ETC.</a>
+    		</div>
+  		</li></ul>
+		<li><a href='photos.html'>PHOTOS</a></li>
+		<li><a href='listboard.jsp'>Q&A</a></li>
+		<li><a href="login.jsp"><img alt="Login Icon" src="login_icon.png" width="35" height="35"></a></li>
+  	</ul>
+
+	<script>
+	/* When the user clicks on the button,
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+    	document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(e) {
+  		if (!e.target.matches('.dropbtn')) {
+    		var dropdowns = document.getElementsByClassName("dropdown-content");
+    		for (var d = 0; d < dropdowns.length; d++) {
+      			var openDropdown = dropdowns[d];
+      			if (openDropdown.classList.contains('show')) {
+        		openDropdown.classList.remove('show');
+      			}
+    		}
+  		}
+	}
+	</script>
+</header>
+
+<!--Content-->
+<section id="main_section">
+<h1>Placement</h1>
+<hr/>
+<div class="img">  
+  <div id="pageone" data-role="main" class="text" >
+   <br/><br/><br/>
+   <a href="#myPopup" data-rel="popup" data-position-to="window" style="color:#8B2500; margin-left:200px; top:350px;"> Kangwondo</a><br/>
+   <a href="#myPopup2" data-rel="popup" data-position-to="window" style="color:#8B2500; margin-left:130px;"> Seoul</a><br/><br/>
+	<a href="#myPopup3" data-rel="popup" data-position-to="window" style="color:#8B2500; margin-left:130px;"> Gyeonggi-do</a><br/><br/><br/>
+	<a href="#myPopup4" data-rel="popup" data-position-to="window" style="color:#8B2500; margin-left:195px;"> Gyeongsangbuk-do</a><br/><br/><br/><br/><br/>
+	<a href="#myPopup5" data-rel="popup" data-position-to="window" style="color:#8B2500; margin-left:110px;"> Jeollanam-do</a>
+	
+      </div>
+    <div data-role="popup" id="myPopup" style="background-color:white; margin-left:200px; margin-top:150px;"> <br/>
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      <div class="detail-box" >
+  <table class="d-table">
+	<colgroup>
+		<col style="width:120px;">
+		<col >
+		<col style="width:120px;">
+		<col >
+	<colgroup>
+	
+	<tr>
+	  <th>Name</th>
+	  <td colspan="3"><b>Gumi conference room</b></td>
+	</tr>
+	<tr>
+	  <th>Charger</th>
+	  <td>Jae won Kim</td>
+	  <th>phone</th>
+	  <td>054-450-3576</td>
+	</tr>
+	<tr>
+	  <th>E-mail</th>
+	  <td colspan="3"><a href="mailto:kjw301006@korea.com">kjw301006@korea.com</a></td>
+	</tr>
+	<tr>
+	  <th>homepage</th>
+	  <td colspan="3"><a href="http://www.moel.go.kr/gumi/index.jsp" target="_blank">http://www.moel.go.kr/gumi/index.jsp</a></td>
+	</tr>
+	<tr>
+	  <th>location</th>
+	  <td colspan="3" id="itm_address">Gumi 312-27</td>
+	</tr>
+
+	<tr>
+	  <th>transportation</th>
+	  <td colspan="3">20minutes from Gumi station</td>
+	</tr>
+
+	<tr>
+	  <th>Fee</th>
+	  <td>free</td>
+	  <th>Parking fee</th>
+	  <td>free</td>
+	</tr>
+  </table>
+  <br/>
+      <img src="lend.PNG" style="padding:20px; width:400px;height:200px;" alt="Skaret View"><br/>
+    </div>
+    
+    
+    <div data-role="popup" id="myPopup2" style="background-color:white; margin-left:200px; margin-top:150px;"> <br/>
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      <div class="detail-box" >
+  <table class="d-table">
+	<colgroup>
+		<col style="width:120px;">
+		<col >
+		<col style="width:120px;">
+		<col >
+	<colgroup>
+	
+	<tr>
+	  <th>Name</th>
+	  <td colspan="3"><b>Seoul Citizens Hall</b></td>
+	</tr>
+	<tr>
+	  <th>Charger</th>
+	  <td>Minho Park</td>
+	  <th>phone</th>
+	  <td>054-277-3333</td>
+	</tr>
+	<tr>
+	  <th>E-mail</th>
+	  <td colspan="3"><a href="mailto:kjw301006@korea.com">saeloya@seoul.go.kr</a></td>
+	</tr>
+	<tr>
+	  <th>homepage</th>
+	  <td colspan="3"><a href="http://www.moel.go.kr/gumi/index.jsp" target="_blank">http://www.seoulcitizenshall.kr/nr/</a></td>
+	</tr>
+	<tr>
+	  <th>location</th>
+	  <td colspan="3" id="itm_address">Seoul SejongDaero 110</td>
+	</tr>
+
+	<tr>
+	  <th>transportation</th>
+	  <td colspan="3">Sicheong station Gate 4</td>
+	</tr>
+
+	<tr>
+	  <th>Fee</th>
+	  <td>66000won</td>
+	  <th>Parking fee</th>
+	  <td>free</td>
+	</tr>
+  </table>
+  <br/>
+      <img src="lend2.PNG" style="padding:20px; width:400px;height:200px;" alt="Skaret View"><br/>
+    </div>
+
+</div> 
+		</div>
+		
+<div data-role="popup" id="myPopup3" style="background-color:white; margin-left:200px; margin-top:150px;"> <br/>
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      <div class="detail-box" >
+  <table class="d-table">
+	<colgroup>
+		<col style="width:120px;">
+		<col >
+		<col style="width:120px;">
+		<col >
+	<colgroup>
+	
+	<tr>
+	  <th>Name</th>
+	  <td colspan="3"><b>Ui Wang Citizens hall</b></td>
+	</tr>
+	<tr>
+	  <th>Charger</th>
+	  <td>Jae won Kim</td>
+	  <th>phone</th>
+	  <td>054-450-3576</td>
+	</tr>
+	<tr>
+	  <th>E-mail</th>
+	  <td colspan="3"><a href="mailto:kjw301006@korea.com">kjw301006@korea.com</a></td>
+	</tr>
+	<tr>
+	  <th>homepage</th>
+	  <td colspan="3"><a href="http://www.moel.go.kr/gumi/index.jsp" target="_blank">http://www.moel.go.kr/gumi/index.jsp</a></td>
+	</tr>
+	<tr>
+	  <th>location</th>
+	  <td colspan="3" id="itm_address">Gyeonggi 312-27</td>
+	</tr>
+
+	<tr>
+	  <th>transportation</th>
+	  <td colspan="3">20minutes from Ei Wang station</td>
+	</tr>
+
+	<tr>
+	  <th>Fee</th>
+	  <td>140000won</td>
+	  <th>Parking fee</th>
+	  <td>free</td>
+	</tr>
+  </table>
+  <br/>
+      <img src="lend3.PNG" style="padding:20px; width:400px;height:200px;" alt="Skaret View"><br/>
+    </div>
+    </div></div>
+ <div data-role="popup" id="myPopup4" style="background-color:white; margin-left:200px; margin-top:150px;"> <br/>
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      <div class="detail-box" >
+  <table class="d-table">
+	<colgroup>
+		<col style="width:120px;">
+		<col >
+		<col style="width:120px;">
+		<col >
+	<colgroup>
+	
+	<tr>
+	  <th>Name</th>
+	  <td colspan="3"><b>Sangju Museum</b></td>
+	</tr>
+	<tr>
+	  <th>Charger</th>
+	  <td>Jae won Kim</td>
+	  <th>phone</th>
+	  <td>054-450-3576</td>
+	</tr>
+	<tr>
+	  <th>E-mail</th>
+	  <td colspan="3"><a href="mailto:kjw301006@korea.com">kjw301006@korea.com</a></td>
+	</tr>
+	<tr>
+	  <th>homepage</th>
+	  <td colspan="3"><a href="http://www.moel.go.kr/gumi/index.jsp" target="_blank">http://www.moel.go.kr/gumi/index.jsp</a></td>
+	</tr>
+	<tr>
+	  <th>location</th>
+	  <td colspan="3" id="itm_address">Gyeongsangbuk-do sangjusi 625</td>
+	</tr>
+
+	<tr>
+	  <th>transportation</th>
+	  <td colspan="3">20minutes from Ei Wang station</td>
+	</tr>
+
+	<tr>
+	  <th>Fee</th>
+	  <td>20,0000won</td>
+	  <th>Parking fee</th>
+	  <td>15000won</td>
+	</tr>
+  </table>
+  <br/>
+      <img src="lend4.PNG" style="padding:20px; width:400px;height:200px;" alt="Skaret View"><br/>
+    </div>
+    </div>
+    
+ <div data-role="popup" id="myPopup5" style="background-color:white; margin-left:200px; margin-top:150px;"> <br/>
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      <div class="detail-box" >
+  <table class="d-table">
+	<colgroup>
+		<col style="width:120px;">
+		<col >
+		<col style="width:120px;">
+		<col >
+	<colgroup>
+	
+	<tr>
+	  <th>Name</th>
+	  <td colspan="3"><b>Suncheon Garden</b></td>
+	</tr>
+	<tr>
+	  <th>Charger</th>
+	  <td>Jay Kim</td>
+	  <th>phone</th>
+	  <td>054-450-3576</td>
+	</tr>
+	<tr>
+	  <th>E-mail</th>
+	  <td colspan="3"><a href="mailto:kjw301006@korea.com">kjw301006@korea.com</a></td>
+	</tr>
+	<tr>
+	  <th>homepage</th>
+	  <td colspan="3"><a href="http://www.moel.go.kr/gumi/index.jsp" target="_blank">http://www.scgardens.or.kr</a></td>
+	</tr>
+	<tr>
+	  <th>location</th>
+	  <td colspan="3" id="itm_address">Geollanam-do sangjusi 625</td>
+	</tr>
+
+	<tr>
+	  <th>transportation</th>
+	  <td colspan="3">20minutes from Ei Wang station</td>
+	</tr>
+
+	<tr>
+	  <th>Fee</th>
+	  <td>20,0000won</td>
+	  <th>Parking fee</th>
+	  <td>free</td>
+	</tr>
+  </table>
+  <br/>
+      <img src="lend5.PNG" style="padding:20px; width:400px;height:200px;" alt="Skaret View"><br/>
+    </div>
+    </div>   
+		
+          
+</section>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<!--Footer-->
+<footer id="main_footer">
+	<p>1600 Amphitheatre Parkway Mountain View, CA 64023 T. +1 650 238 2999<p>
+    <p>© 2016 Petite Mariee, Inc. All Rights Reserved.<p>
+</footer>
+
+</body>
+</html>

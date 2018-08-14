@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>About Page</title>
+	<link rel=stylesheet href="about.css"/>
+	<link rel=stylesheet href="dropdown.css"/>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+	function initialize() {
+  		var mapProp = {
+    	center:new google.maps.LatLng(51.508742,-0.120850),
+    	zoom:5,
+    	mapTypeId:google.maps.MapTypeId.ROADMAP
+  	};
+  	var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+</head>
+<body>
+<!--Main Header-->
+	<header id="main_header">
+	<nav id="main_menu"></nav>
+	<ul id='menu'>
+		<li><a href='index.html'>HOME</a></li>
+		<li><a href='about.html'>ABOUT</a></li>
+		<ul><li class="dropdown">
+    		<a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">CUSTOMIZE+</a>
+    		<div class="dropdown-content" id="myDropdown">
+     	 		<a href="place.html">PLACE</a>
+     	 	 	<a href="etc.html">ETC.</a>
+    		</div>
+  		</li></ul>
+		<li><a href='photos.html'>PHOTOS</a></li>
+		<li><a href='listboard.jsp'>Q&A</a></li>
+		<li><a href="login.jsp"><img alt="Login Icon" src="login_icon.png" width="45" height="45"></a></li>
+  	</ul>
+
+	<script>
+	/* When the user clicks on the button,
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+    	document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(e) {
+  		if (!e.target.matches('.dropbtn')) {
+    		var dropdowns = document.getElementsByClassName("dropdown-content");
+    		for (var d = 0; d < dropdowns.length; d++) {
+      			var openDropdown = dropdowns[d];
+      			if (openDropdown.classList.contains('show')) {
+        		openDropdown.classList.remove('show');
+      			}
+    		}
+  		}
+	}
+	</script>
+
+<!--Content-->
+<div id="content">
+	<section id="contact_section">
+		<h1>CONTACT US.<h1>
+		<img alt="Line" src="line.png" width="400" height="20">
+		<img alt="PM Logo" src="pm_logo.png" width="190" height="80"></br>
+		<table>
+			<tr>
+				<td><img alt="Icon1 Image" src="icon1.png" width="30" height="30"></td>
+				<td><span style="font-size:18px;padding:5px">+1 650 238 2999</span></td>
+			</tr>	
+			<tr>
+				<td><img alt="Icon2 Image" src="icon2.png" width="30" height="30"></td>
+				<td><span style="font-size:18px;padding:5px">petitemariee@gmail.com</span></td>
+			</tr>
+			<tr>
+				<td><img alt="Icon3 Image" src="icon3.png" width="30" height="30"></td>
+				<td><span style="font-size:18px;padding:5px">1600 Amphitheatre Parkway Mountain View, CA 64023</span></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><div id="googleMap" style="width:230px;height:190px;"></div></td>
+			</tr>
+		</table>
+	</section>
+	<aside id="contact_aside">
+		<img alt="Contact Image" src="contact.jpg" width="450" height="500">
+	</aside>	
+</div>
+
+<!--Footer-->
+<footer id="main_footer">
+	<p>1600 Amphitheatre Parkway Mountain View, CA 64023 T. +1 650 238 2999<p>
+    <p>© 2016 Petite Mariee, Inc. All Rights Reserved.<p>
+</footer>
+</header>
+</body>
+</html>
